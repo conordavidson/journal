@@ -1,0 +1,40 @@
+.Navigation {
+  &__backward {
+    cursor: w-resize;
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__forward {
+    cursor: e-resize;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+  }
+}
+
+.Info {
+  &__chapter-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  &__indices {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.Page {
+  &__caption {
+    white-space: pre-wrap;
+  }
+}

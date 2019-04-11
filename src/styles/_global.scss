@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  transition: opacity 0.25s ease-in-out;
+  image-orientation: from-image;
+}
