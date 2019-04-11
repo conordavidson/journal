@@ -1,7 +1,7 @@
-import React, { PureComponent } from "react";
-import { MediaTypes } from "../../constants";
-import ImageView from "../Image/view";
-import VideoView from "../Video/view";
+import React, { PureComponent } from 'react';
+import { MediaTypes } from 'constants';
+import ImageView from 'components/Image/view';
+import VideoView from 'components/Video/view';
 
 export default class Media extends PureComponent {
   render() {

@@ -1,6 +1,6 @@
 import { PureComponent } from 'react';
-import { withPageContext } from '../Page';
-import { MediaTypes } from '../../constants';
+import { withPageContext } from 'components/Page';
+import { MediaTypes } from 'constants';
 
 class Video extends PureComponent {
   componentDidMount() {

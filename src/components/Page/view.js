@@ -1,5 +1,5 @@
 import React, { PureComponent, createRef } from 'react';
-import Media from '../Media';
+import Media from 'components/Media';
 
 const VERTICAL_PADDING = 96;
 const HORIZONTAL_PADDING = 32;

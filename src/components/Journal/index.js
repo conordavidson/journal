@@ -3,13 +3,14 @@ import React, { PureComponent, createContext } from 'react';
 
 import uuid from 'uuid/v4';
 import get from 'lodash/get';
-import navigateForward from '../../utils/navigateForward';
-import navigateBackward from '../../utils/navigateBackward';
-import Navigation from '../Navigation';
-import Layout from '../Layout';
-import JournalView from './view';
-import ChapterView from '../Chapter/view';
-import PageView from '../Page/view';
+
+import navigateForward from 'utils/navigateForward';
+import navigateBackward from 'utils/navigateBackward';
+import Navigation from 'components/Navigation';
+import Layout from 'components/Layout';
+import JournalView from 'components/Journal/view';
+import ChapterView from 'components/Chapter/view';
+import PageView from 'components/Page/view';
 import 'styles/index.scss';
 
 const JournalContext = createContext({});

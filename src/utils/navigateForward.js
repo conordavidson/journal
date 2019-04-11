@@ -1,11 +1,4 @@
-export default (
-  chapterCount,
-  chapterIndex,
-  pageCount,
-  pageIndex,
-  mediaCount,
-  mediaIndex
-) => {
+export default (chapterCount, chapterIndex, pageCount, pageIndex, mediaCount, mediaIndex) => {
   let updatedChapterIndex = chapterIndex;
   let updatedPageIndex = pageIndex;
   let updatedMediaIndex = mediaIndex;
@@ -32,6 +25,6 @@ export default (
   return {
     chapter: updatedChapterIndex,
     page: updatedPageIndex,
-    media: updatedMediaIndex
+    media: updatedMediaIndex,
   };
 };

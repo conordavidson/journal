@@ -1,5 +1,5 @@
-import React, { PureComponent, createContext } from "react";
-import { withJournalContext } from "../Journal";
+import React, { PureComponent, createContext } from 'react';
+import { withJournalContext } from 'components/Journal';
 
 const ChapterContext = createContext({});
 export const withChapterContext = WrappedComponent => {
@@ -7,9 +7,7 @@ export const withChapterContext = WrappedComponent => {
     render() {
       return (
         <ChapterContext.Consumer>
-          {chapterContext => (
-            <WrappedComponent {...this.props} chapter={chapterContext} />
-          )}
+          {chapterContext => <WrappedComponent {...this.props} chapter={chapterContext} />}
         </ChapterContext.Consumer>
       );
     }
@@ -24,22 +22,18 @@ class Chapter extends PureComponent {
   };
 
   chapterContext = {
-    registerPage: this.registerPage
+    registerPage: this.registerPage,
   };
 
   componentDidMount() {
     this.props.journal.registerChapter({
       ...this.props,
-      pages: this.pages
+      pages: this.pages,
     });
   }
 
   render() {
-    return (
-      <ChapterContext.Provider value={this.chapterContext}>
-        {this.props.children}
-      </ChapterContext.Provider>
-    );
+    return <ChapterContext.Provider value={this.chapterContext}>{this.props.children}</ChapterContext.Provider>;
   }
 }
 

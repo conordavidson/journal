@@ -1,5 +1,5 @@
-import React, { PureComponent, createContext } from "react";
-import { withChapterContext } from "../Chapter";
+import React, { PureComponent, createContext } from 'react';
+import { withChapterContext } from 'components/Chapter';
 
 const PageContext = createContext({});
 export const withPageContext = WrappedComponent => {
@@ -7,9 +7,7 @@ export const withPageContext = WrappedComponent => {
     render() {
       return (
         <PageContext.Consumer>
-          {pageContext => (
-            <WrappedComponent {...this.props} page={pageContext} />
-          )}
+          {pageContext => <WrappedComponent {...this.props} page={pageContext} />}
         </PageContext.Consumer>
       );
     }
@@ -24,22 +22,18 @@ class Page extends PureComponent {
   };
 
   pageContext = {
-    registerMedia: this.registerMedia
+    registerMedia: this.registerMedia,
   };
 
   componentDidMount() {
     this.props.chapter.registerPage({
       ...this.props,
-      media: this.media
+      media: this.media,
     });
   }
 
   render() {
-    return (
-      <PageContext.Provider value={this.pageContext}>
-        {this.props.children}
-      </PageContext.Provider>
-    );
+    return <PageContext.Provider value={this.pageContext}>{this.props.children}</PageContext.Provider>;
   }
 }
 

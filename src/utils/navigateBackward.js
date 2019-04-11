@@ -5,7 +5,7 @@ export default (
   pageIndex,
   previousPageMediaCount,
   mediaIndex,
-  previousChapterLastPageMediaCount
+  previousChapterLastPageMediaCount,
 ) => {
   let updatedChapterIndex = chapterIndex;
   let updatedPageIndex = pageIndex;
@@ -21,22 +21,18 @@ export default (
 
   if (onFirstMedia && !onFirstPage) {
     updatedPageIndex--;
-    updatedMediaIndex =
-      previousPageMediaCount === 0 ? 0 : previousPageMediaCount - 1;
+    updatedMediaIndex = previousPageMediaCount === 0 ? 0 : previousPageMediaCount - 1;
   }
 
   if (onFirstMedia && onFirstPage && !onFirstChapter) {
     updatedChapterIndex--;
     updatedPageIndex = previousChapterPageCount - 1;
-    updatedMediaIndex =
-      previousChapterLastPageMediaCount === 0
-        ? 0
-        : previousChapterLastPageMediaCount - 1;
+    updatedMediaIndex = previousChapterLastPageMediaCount === 0 ? 0 : previousChapterLastPageMediaCount - 1;
   }
 
   return {
     chapter: updatedChapterIndex,
     page: updatedPageIndex,
-    media: updatedMediaIndex
+    media: updatedMediaIndex,
   };
 };
